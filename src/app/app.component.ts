@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {ObjectivesService} from "./wingspan-objectives/objectives.service";
+import {Objective} from "./shared/models/objective";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'birdhouse';
+
+  objectives: Objective[] = [];
+
+  constructor(objectivesService: ObjectivesService) {
+    this.objectives = objectivesService.getObjectives()
+  }
 }

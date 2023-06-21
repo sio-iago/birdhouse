@@ -1,3 +1,18 @@
 <h1>Welcome to Birdhouse</h1>
 
 <p>You can use the tools to make your setup or point counting easier when playing Wingspan&reg;</p>
+
+<table>
+  <thead>
+  <tr>
+    <th>Objective</th>
+    <th>Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let objective of objectives">
+    <td><img width="60" height="60" src="assets/{{objective.image}}" alt="{{objective.name}}" /></td>
+    <td>{{objective.name}}</td>
+  </tr>
+  </tbody>
+</table>
